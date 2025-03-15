@@ -1,11 +1,19 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { useState } from 'react';
+import { View, Text, Button, StyleSheet } from 'react-native';
+import InicialPage from './src/pages/InicialPage';
+import GamePage from './src/pages/GamePage';
 
 export default function App() {
+  const [currentScreen, setCurrentScreen] = useState('InicialPage'); // Estado para controlar a tela atual
+
+  const navigateTo = (screen) => {
+    setCurrentScreen(screen); // Muda a tela
+  };
+
   return (
     <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
+      {currentScreen === 'InicialPage' && <InicialPage navigateTo={navigateTo} />}
+      {currentScreen === 'GamePage' && <GamePage navigateTo={navigateTo} />}
     </View>
   );
 }
@@ -13,8 +21,5 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
   },
 });

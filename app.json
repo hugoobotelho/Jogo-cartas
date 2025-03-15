@@ -4,25 +4,33 @@
     "slug": "Cartas",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./src/assets/animals.png",
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
     "splash": {
-      "image": "./assets/splash-icon.png",
+      "image": "./src/assets/animals.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#F02487"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.hugo.cartas"
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./src/assets/animals.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.hugo.cartas",
+      "versionCode": 1
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./src/assets/animals.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "c19fcb6b-38d2-44c8-b71f-5d0891d865f6"
+      }
     }
   }
 }
